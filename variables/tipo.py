@@ -16,3 +16,7 @@ diccionario={"nombre":"yandry","apellido":"Yandry"}#lista de datos con clave y v
 print(lista)
 print(tupla)
 print(diccionario)
+
+#con /n doy espacio
+#con /t tabulo
+#con /r borro lo q esta atras
