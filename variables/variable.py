@@ -12,5 +12,5 @@ print(completo)
 
 print(f"{nombre} {apellido}") #concatenamos con la f
 
-print("hola mi nombre es {} y mi apellido es ".format(nombre,apellido)) 
+print("hola mi nombre es {} y mi apellido es {} ".format(nombre,apellido)) 
 #concatenamos segun con llaves las palabras que queramos incluir 
