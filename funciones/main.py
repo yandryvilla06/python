@@ -3,6 +3,8 @@ Funciones:
 Una funcion es un conjunto de instrucciones agrupadas bajo un nombre concreto
 que pueden reutilizarse invocando a la funcion tantas veces como sea necesario.
 
+Def es la palabra reservada para las funciones 
+
 def mifuncion(parametros):
     instrucciones
 
@@ -12,7 +14,7 @@ def mifuncion(parametro, parametro2=None)
   if parametro2!=None
      print("muestro")
 
-
+ 
 funciones lambda
 
 En Python, una función Lambda se refiere a una pequeña función anónima. Las llamamos “funciones anónimas” porque técnicamente carecen de nombre.
@@ -22,6 +24,7 @@ se definen como una línea que ejecuta una sola expresión. Este tipo de funcion
 Como mejor te lo puedo explicar es enseñándote un ejemplo básico, vamos a ver una función normal y un ejemplo de Lambda:
 #Aquí tenemos una función creada para sumar.
 
+Lo que esta dentro de los parentesis se conoce como argumento
 def suma(x,y):
     return(x + y)
 #Aquí tenemos una función Lambda que también suma.
@@ -54,3 +57,30 @@ upper()=mayusculas
 
 """
 
+"""
+
+En python es posible devolver mas de un valor en una unica sentencia return
+esto se consigue del siguiente modo:
+
+>> def cuadrado_y_cubo(numero):
+...     return numero ** 2, numero ** 3
+... 
+>>> cuad, cubo = cuadrado_y_cubo(4)
+>>> cuad
+16
+>>> cubo
+64
+Otra forma
+Sin embargo, se puede usar otra técnica devolviendo los diferentes resultados/valores en una lista. Por ejemplo, la función tabla_del() que se muestra a continuación hace esto:
+
+>>> def tabla_del(numero):
+...     resultados = []
+...     for i in range(11):
+...         resultados.append(numero * i)
+...     return resultados
+... 
+>>> res = tabla_del(3)
+>>> res
+[0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+
+"""
