@@ -1,3 +1,2 @@
 #Entrada
-nombre=input("¿Cual es tu nombre?: ")
-print("Hola:"+nombre)
+print(4|2)
