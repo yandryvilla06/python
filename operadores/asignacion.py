@@ -1,4 +1,4 @@
-from _typeshed import SupportsItemAccess
+
 
 
 numero=12
