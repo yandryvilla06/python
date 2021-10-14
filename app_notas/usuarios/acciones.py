@@ -1,5 +1,6 @@
 
 import usuarios.usuario as modelo
+import notas.accion_nota 
 
 class Acciones:
 
@@ -49,8 +50,8 @@ class Acciones:
 
         except Exception as e:
           
-            print(type(e))
-            print(type(e).__name__)
+            # print(type(e))
+            # print(type(e).__name__)
             print(f"Login incorrecto , intentalo mas tarde")  
 
 
@@ -67,14 +68,29 @@ class Acciones:
          
         """))
 
+        hazEl=notas.accion_nota.Acciones()
+
         if accion==1:
-            pass
+
+            hazEl.crear(usuario)
+            self.proximasAcciones(usuario) #con esto repito menu
+           
+            
+
+         
 
         elif accion==2:
-            pass
+
+            hazEl.mostrar(usuario)
+            self.proximasAcciones(usuario)
+            
 
         elif accion==3:
-            pass  
+
+            
+            hazEl.eliminar()
+            self.proximasAcciones(usuario)
+
         elif accion==4:
             pass
 

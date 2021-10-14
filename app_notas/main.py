@@ -1,3 +1,4 @@
+
 from usuarios import acciones
 """ Importamos de nuestro paquete usuarios el modulo acciones"""
 
@@ -22,7 +23,7 @@ elif opc == 2:
     """ Si se elige dos se realiza la accion de login() localizada en nuestro modulo acciones"""
 
     accion.login()
-    accion.proximasAcciones()
+    
    
 
 else:
