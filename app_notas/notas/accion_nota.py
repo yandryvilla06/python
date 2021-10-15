@@ -28,31 +28,37 @@ class Acciones:
         nota=modelo.Nota(usuario[0],"","")
         notas_mostradas=nota.listar()
 
-        # if notas_mostradas[0]>=1:
+        if notas_mostradas[0]>=1:
               
            
-        for nota in notas_mostradas:
+         for nota in notas_mostradas[1]:
            
-           print("\n **************************")
-           print("ID NOTA" +nota[0])
+          #Nota importante no se xq razon si pongo print("id"+nota[0]) me da error
+           print("*************************")
+           print(f"ID NOTA {nota[0]}")
            print(nota[2])
            print(nota[3])
-           print("\n **************************")
+           print("*************************")
+         
 
-        # else:
+        else:
 
-        #     print("No se pueden mostrar notas xq no hay ")
+             print("No se pueden mostrar notas xq no hay ")
     
     def eliminar(self):
 
-        id_bus=input("Escriba el ID de la nota a eliminar")
+        id_bus=input("Escriba el ID de la nota a eliminar \n")
         
-        filasborradas=modelo.borrar(id_bus)
+        filasborradas=modelo.Nota('','','').borrar(id_bus)
 
         if filasborradas>=1:
-            print("borrado exitoso")
+            print(f"La nota {id_bus} se ha eliminado exitosamente")
+        
         else:
-            print("error al borrar")
+
+            print(f"Error al borrar la nota {id_bus}")
+
+        
 
 
 

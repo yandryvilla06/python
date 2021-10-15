@@ -46,17 +46,17 @@ class Nota:
        result=cursor.fetchall()
 
         
-       return result
+       return [cursor.rowcount,result]
         
    def borrar(self,idbus):
 
-       sql=f"DELETE * from notas WHERE id={idbus};"
+       sql=f"DELETE FROM notas WHERE id={int(idbus)};"
 
        try:
         cursor.execute(sql)
 
         database.commit()
-        result=cursor.rowcount()
+        result=cursor.rowcount
        except:
         result=0
         

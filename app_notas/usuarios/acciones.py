@@ -86,8 +86,8 @@ class Acciones:
             
 
         elif accion==3:
-
             
+            hazEl.mostrar(usuario)
             hazEl.eliminar()
             self.proximasAcciones(usuario)
 
