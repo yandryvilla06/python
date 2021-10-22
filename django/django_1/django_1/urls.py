@@ -24,5 +24,6 @@ urlpatterns = [
   
     path('miapp/',include('miapp.urls')), 
     path('admin/', admin.site.urls),
+    
   
 ]
