@@ -1,4 +1,5 @@
 {% load static %}
+{% load filters %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}" >
 </head>
 <body>
@@ -13,21 +15,38 @@
     <header>
       <div class="header_top">
         <img class="logo" src="{% static 'images/logo.png' %}"/>
-        {% block title %}<h1>Web con Django</h1>{% endblock %}
+        {% block title %}<h1>{{variable}}</h1>{% endblock %}
       </div>
       <div class="navbar">
          <ul class="lista">
-           <li><a href="blog">Blog</a></li>
+           <li><a href="{% url 'blog' %}">Blog</a></li>
            <li><a href="index">Index</a></li>
            <li><a href="top">Top</a></li>
-         </ul> 
+         </ul>   
       </div>
 
 
     </header>
 
     <section class="central">
-      <h1>Aprende Django</h1>     
+      <h1>Aprende Django</h1> 
+       
+      {% if nombre and nombre == 'pepe' %} 
+        <p>Hola soy {{nombre}}</p>
+      {%else%}
+      
+        <p>Soy Dorian</p>
+      {%endif%}
+   <h1>Idiomas que hablo</h1>
+    <ul style="margin-left: 20px;">
+       {% for idiom in idiomas %}
+         <li>{{idiom}}</li>
+       {%empty%}
+           <p>No hay lenguaje que mostrar</p>
+       {% endfor %}
+    </ul>
+    {% include 'bloque.html' %}
+    <p>{{ nombre|add_apellido|safe}}</p>
 
     </section>
     

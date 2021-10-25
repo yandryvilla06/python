@@ -16,8 +16,9 @@ layout="""
 def index(request):
     #layout concatenado en return
     # return HttpResponse(f"Hola")
-
-    return render(request,'index.html')
+    nombre='pepe'
+    idiomas=["español","ingles","mandarin","japones"]
+    return render(request,'index.html',{'variable':"BY YANDRY",'nombre':nombre,'idiomas':idiomas})
 
 def blog(request):
      return render(request,'blog.html')   

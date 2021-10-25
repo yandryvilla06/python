@@ -7,6 +7,6 @@ urlpatterns=[
 
     path('index',views.index,name='index'),
     # path('blog/<str:nombre>',views.blog,name='blog'),
-    path('blog',views.blog,name='blog'),
+    path('mesa/blog',views.blog,name='blog'),
     path('top',views.top,name='top')
 ]
