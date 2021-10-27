@@ -20,8 +20,10 @@
       <div class="navbar">
          <ul class="lista">
            <li><a href="{% url 'blog' %}">Blog</a></li>
-           <li><a href="index">Index</a></li>
-           <li><a href="top">Top</a></li>
+           <li><a href="{% url 'index' %}">Index</a></li>
+           <li><a  href="{% url 'top' %}">Top</a></li>
+           <li><a href="{% url 'lista_articulo' %}">LISTA ARTICULO</a></li>
+            <li><a href={% url 'crear_articulo' %}>Crear Articulo</a></li>
          </ul>   
       </div>
 
